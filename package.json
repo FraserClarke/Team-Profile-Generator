@@ -1,0 +1,25 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Node command line application that takes data, then generates a webpage.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FraserClarke/Team-Profile-Generator.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FraserClarke/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/FraserClarke/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
