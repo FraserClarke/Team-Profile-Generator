@@ -4,10 +4,13 @@ describe("Employee", () => {
     it ("", () => {
         // create a new Employee object 
         // assert that the employees getName function returns the name I created the employee with. 
-        const employee = new Employee();
+        //const employee = new Employee();
 
         // Assert
-        expect(employee.getName).toEqual(employee.name);
+        //expect(employee.getName).toEqual(employee.name);
+
+        const employee = new Employee("john");
+        expect(employee.getName).toEqual("john");
         //expect(employee.name).toEqual(false)
         //const text = getName
 

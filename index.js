@@ -14,8 +14,35 @@ const promptUser = () => {
     {
         type: 'input',
         name: 'name',
+        message: 'Welcome, press enter at any time to skip. Enter Team managers name:',
+      },
+      {
+        type: 'input',
+        name: 'employeeId',
+        message: 'Enter employee ID:',
+      },
+      {
+        type: 'input',
+        name: 'emailAdress',
+        message: 'Enter Email address:',
+      },
+      {
+        type: 'input',
+        name: 'officeNumber',
+        message: 'Enter office number:',
+      },
+      {
+        type: 'input',
+        name: 'name',
         message: 'Welcome, press enter at any time to skip. What is your name?:',
       },
+      {
+        type: 'list',
+        name: 'Options',
+        message: 'Add engineer, intern or finish building team:',
+        choices: ['Add Engineer', 'Add Intern', 'Finish building team'],
+        },
+
     
     ]);
 };  
