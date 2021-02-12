@@ -7,7 +7,7 @@ describe("Employee", () => {
         const employee = new Employee();
 
         // Assert
-        expect(employee.name).toEqual(text);
+        expect(employee.getName).toEqual(employee.name);
         //expect(employee.name).toEqual(false)
         //const text = getName
 
