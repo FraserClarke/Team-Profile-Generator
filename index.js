@@ -22,7 +22,7 @@ const promptUser = () => {
       
       const init = () => {
         promptUser()
-          .then((answers) => writeFileAsync('./sampleReadme/readme.md', generateMarkdown(answers)))
+          .then((answers) => writeFileAsync('./dist/index.html', Employee(answers)))
           .then(() => console.log('Successfully wrote '))
           .catch((err) => console.error(err));
       };
