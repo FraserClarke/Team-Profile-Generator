@@ -40,7 +40,7 @@ const promptUser = () => {
         type: 'list',
         name: 'Options',
         message: 'Add engineer, intern or finish building team:',
-        choices: ['Add Engineer', 'Add Intern', 'Finish building team'],
+        choices: ['Engineer', 'Intern', 'Finish'],
         },
 
     
