@@ -33,11 +33,7 @@ const promptManager = () => {
         name: 'officeNumber',
         message: 'Enter office number:',
       },
-      {
-        type: 'input',
-        name: 'name',
-        message: 'Welcome, press enter at any time to skip. What is your name?:',
-      },
+      
       
     
     ]);
@@ -54,6 +50,10 @@ function optionList() {
     console.log(teamChoices)
     if(teamChoices.options === "Engineer"){
       addEng()
+    if(teamChoices.options === "Intern"){
+      addIntern()
+    }
+    //default()
     }
 
 
@@ -64,12 +64,60 @@ function optionList() {
 }
 
 function addEng(){
+  inquirer.prompt([
+    {
+    type: 'input',
+    name: 'name',
+    message: 'Add engineer, intern or finish building team:',
+    },
+    {
+      type: 'input',
+      name: 'name',
+      message: 'Add engineer, intern or finish building team:',
+      },
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Add engineer, intern or finish building team:',
+        },
+        {
+          type: 'input',
+          name: 'name',
+          message: 'Add engineer, intern or finish building team:',
+          },
+  
+  
+  ])
   console.log("addEng")
 }
 
 
 function addIntern(){
-    console.log("addIntern")
+  inquirer.prompt([
+    {
+    type: 'input',
+    name: 'name',
+    message: 'Add engineer, intern or finish building team:',
+    },
+    {
+      type: 'input',
+      name: 'name',
+      message: 'Add engineer, intern or finish building team:',
+      },
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Add engineer, intern or finish building team:',
+        },
+        {
+          type: 'input',
+          name: 'name',
+          message: 'Add engineer, intern or finish building team:',
+          },
+  
+  
+  ])
+  console.log("addIntern")
 }
 
 const init = () => {
