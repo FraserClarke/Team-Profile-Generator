@@ -1,5 +1,36 @@
 const Employee = require('../lib/Employee');
 
+// if it is an object
+
+test("can create a new employee object", () => {
+    const employee = new Employee("john", 123, "john@gmail.com");
+    expect(typeof(employee)).toBe("object")
+})
+
+
+// if this.name is working
+test("can create a new employee name", () => {
+    const employee = new Employee("john");
+    expect(employee.getName()).toBe("john");
+})
+
+
+// if this.id is working
+
+// if this.email is working
+
+// if getRoleis working
+
+// if getName is working
+
+// if getId is working
+
+// if getEmail is working
+
+
+
+
+
 describe("Employee", () => {
     it ("", () => {
         // create a new Employee object 
