@@ -60,6 +60,16 @@ function optionList() {
     //default(generateTeam)
     }
 
+    // switch (new Date().getDay()) {
+    //   case 6:
+    //     text = "Today is Saturday";
+    //     break;
+    //   case 0:
+    //     text = "Today is Sunday";
+    //     break;
+    //   default:
+    //     text = "Looking forward to the Weekend";
+    // }
 
     //if default call the function that takes care of generating the template and writing the file
     generateTeam();
