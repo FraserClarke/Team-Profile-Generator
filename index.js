@@ -3,8 +3,11 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 //import all libs
-
 const Employee = require("./lib/Employee");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const Manager = require("./lib/Manager");
+
 let Team = [];
 
 
@@ -21,7 +24,7 @@ const promptManager = () => {
       {
         type: 'input',
         name: 'employeeId',
-        message: 'Enter employee ID:',
+        message: 'Enter Managers employee ID:',
       },
       {
         type: 'input',
@@ -53,7 +56,8 @@ function optionList() {
     if(teamChoices.options === "Intern"){
       addIntern()
     }
-    //default()
+    //if(default) generateTeam
+    //default(generateTeam)
     }
 
 
@@ -68,22 +72,22 @@ function addEng(){
     {
     type: 'input',
     name: 'name',
-    message: 'Add engineer, intern or finish building team:',
+    message: 'Enter engineers name:',
     },
     {
       type: 'input',
-      name: 'name',
-      message: 'Add engineer, intern or finish building team:',
+      name: 'engineerId',
+      message: 'Enter engineers ID:',
       },
       {
         type: 'input',
-        name: 'name',
-        message: 'Add engineer, intern or finish building team:',
+        name: 'email',
+        message: 'Add engineers email adress:',
         },
         {
           type: 'input',
-          name: 'name',
-          message: 'Add engineer, intern or finish building team:',
+          name: 'github',
+          message: 'Add engineers Github Username:',
           },
   
   
@@ -97,22 +101,22 @@ function addIntern(){
     {
     type: 'input',
     name: 'name',
-    message: 'Add engineer, intern or finish building team:',
+    message: 'Add interns name:',
     },
     {
       type: 'input',
-      name: 'name',
-      message: 'Add engineer, intern or finish building team:',
+      name: 'internId',
+      message: 'Add interns ID:',
       },
       {
         type: 'input',
-        name: 'name',
-        message: 'Add engineer, intern or finish building team:',
+        name: 'email',
+        message: 'Add interns email:',
         },
         {
           type: 'input',
-          name: 'name',
-          message: 'Add engineer, intern or finish building team:',
+          name: 'school',
+          message: 'Add interns school:',
           },
   
   
