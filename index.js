@@ -51,9 +51,9 @@ function optionList() {
     }])
   .then((teamChoices) => {
     console.log(teamChoices)
-    if(teamChoices.options === "Engineer"){
+    if(teamChoices.Options === "Engineer"){
       addEng()
-    if(teamChoices.options === "Intern"){
+    if(teamChoices.Options === "Intern"){
       addIntern()
     }
     //if(default) generateTeam
@@ -89,10 +89,12 @@ function addEng(){
           name: 'github',
           message: 'Add engineers Github Username:',
           },
-  
+          
   
   ])
   console.log("addEng")
+  //.then(optionList);
+  //.then(optionList());
 }
 
 
