@@ -57,7 +57,7 @@ function optionList() {
     if(teamChoices.Options === "Intern"){
       addIntern()
     }
-    //if(default) generateTeam
+    else(generateTeam())
     //default(generateTeam)
     }
 
@@ -142,7 +142,7 @@ const init = () => {
   promptManager()
   .then((answers)=> {
     //generate Manager
-    let manager = new manager
+        //let manager = new manager
     //push manager to the array
   //Team.push
 
@@ -163,7 +163,7 @@ const generateTeam = () => {
   //teamhtml.generateAllhtml(answers))) //output goes into fs.writefile
   //writefile
   //teamhtml.generateallhtml(answers))) //answers are the variables above
-  fs.writeFileSync('./template.js')
+  //fs.writeFileSync('./template.js')
 }
 
 // const init = () => {
