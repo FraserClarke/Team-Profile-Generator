@@ -7,6 +7,7 @@ const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
+const teamHTML = require("./src/template")
 
 let Team = [];
 
@@ -18,7 +19,7 @@ const promptManager = () => {
   return inquirer.prompt([
     {
         type: 'input',
-        name: 'name',
+        name: 'mangaerName',
         message: 'Welcome, press enter at any time to skip. Enter Team managers name:',
       },
       {
@@ -102,8 +103,8 @@ function addEng(){
           
   
   ])
-  console.log("addEng")
-  //.then(optionList);
+  //console.log("addEng")
+  .then(optionList);
   //.then(optionList());
 }
 
@@ -112,7 +113,7 @@ function addIntern(){
   inquirer.prompt([
     {
     type: 'input',
-    name: 'name',
+    name: 'internName',
     message: 'Add interns name:',
     },
     {
@@ -133,15 +134,17 @@ function addIntern(){
   
   
   ])
-  console.log("addIntern")
+  //console.log("addIntern")
+  .then(optionList);
 }
 
 const init = () => {
   promptManager()
   .then((answers)=> {
     //generate Manager
-    let manager = new 
+    let manager = new manager
     //push manager to the array
+  //Team.push
 
 
   optionList()
@@ -152,8 +155,23 @@ const init = () => {
 
 const generateTeam = () => {
   //pass array to the template
+  teamHTML.gernerateMangerHTML
   //write the string to a html file using fs.writeFileSync
+  //egin ///create variables
+  //inter
+  //call function to gernate all based on above string
+  //teamhtml.generateAllhtml(answers))) //output goes into fs.writefile
+  //writefile
+  //teamhtml.generateallhtml(answers))) //answers are the variables above
+  fs.writeFileSync('./template.js')
 }
+
+// const init = () => {
+//   promptUser()
+//     .then((answers) => writeFileAsync('./html', teamhtml.generateallhtml(answers)))
+//     .then(() => console.log('Successfully wrote to readme.md'))
+//     .catch((err) => console.error(err));
+// };
 
 
 
