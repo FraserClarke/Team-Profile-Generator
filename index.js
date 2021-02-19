@@ -83,22 +83,22 @@ function addEng() {
     .prompt([
       {
         type: "input",
-        name: "name",
+        name: "engName",
         message: "Enter engineers name:",
       },
       {
         type: "input",
-        name: "engineerId",
+        name: "engId",
         message: "Enter engineers ID:",
       },
       {
         type: "input",
-        name: "email",
+        name: "engEmail",
         message: "Add engineers email adress:",
       },
       {
         type: "input",
-        name: "github",
+        name: "engGithub",
         message: "Add engineers Github Username:",
       },
     ])
@@ -106,14 +106,17 @@ function addEng() {
     //.then(optionList);
     //.then(optionList());
     .then((answers) => {
-      const manager = new Manager(
-        answers.managerName,  ///CHANGE TO ENIGINEER DATA SAME AS MANGE BELOW EG TEAM.PUSH etc
-        answers.employeeId,
-        answers.emailAdress,
-        answers.officeNumber
+      const engineer = new Engineer(
+        answers.enginName,  ///CHANGE TO ENIGINEER DATA SAME AS MANGE BELOW EG TEAM.PUSH etc
+        answers.engId,
+        answers.engEmail,
+        answers.engGithub
       );
       // Store new engineer in team array here
       // Call on optionList() again. 
+      Team.push(engineer);
+
+      optionList();
     });
 }
 
@@ -133,17 +136,33 @@ function addIntern() {
       },
       {
         type: "input",
-        name: "email",
+        name: "internEmail",
         message: "Add interns email:",
       },
       {
         type: "input",
-        name: "school",
+        name: "internSchool",
         message: "Add interns school:",
       },
+      
+
     ])
 
-    .then(optionList);
+    .then((answers) => {
+      const intern = new Intern(
+        answers.internName,  ///CHANGE TO ENIGINEER DATA SAME AS MANGE BELOW EG TEAM.PUSH etc
+        answers.internId,
+        answers.internEmail,
+        answers.internSchool,
+      );
+      // Store new engineer in team array here
+      // Call on optionList() again. 
+      Team.push(intern);
+
+      optionList();
+    });
+
+    //.then(optionList);
 }
 
 const init = () => {
