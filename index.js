@@ -201,6 +201,13 @@ const generateTeam = () => {
  //act as where you will be creating then sending this new info that is being generated.
   //fs.writeFileSync('./dist/index.html, test');
   //((answers) => writeFilesync('./dist/index.html, teamHTML.generateallhtml(answers)))
+
+
+  //WRITEFILE
+  // fs.writeFileSync(outputPath, renderHTML(array), "utf-8");
+  // OR
+  // fs.writeFileSync(outputPath, variable, "utf-8");
+  // var variable = renderHTML(array)
 };
 
 // fs.writeFileSync( file, data, options )

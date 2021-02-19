@@ -2,7 +2,11 @@
 const teamHTML =  {
 
 	//filter manager and pass to genrate manager
-	
+// 	const html = [];
+//    html.push(data
+//        .filter(employee => employee.getRole() === "Manager")
+//        .map(manager => generateManagerHTML(manager))
+//    );
 	
 	// generate Manager
 	 gernerateMangerHTML: (data) => {
@@ -22,13 +26,7 @@ const teamHTML =  {
 	},
 
 	
-	// function generateMarkdown(data) {
-	// 	console.log(data);
 	
-	//   return `# ${data.title}
-	
-	//   ${renderLicenseBadge(data.license)}
-	// generate Eng
 
 	//generate Intern
 
