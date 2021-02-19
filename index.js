@@ -189,16 +189,24 @@ const generateTeam = () => {
   //pass array to the template
 
   // TEAM is a global array, at this point we know what team members we have .
-
+  //teamHTML = test;
   // initilialise a string which is the HTML string. 
   // Iterate through each team meber in TEAM:
   //   Get their role bycalling their getRole method.
   //   Depending on their role, call the appropriate generateHtml function, appendto HTML string . 
   //Team.forEach(getRole)
   //teamHTML.gernerateMangerHTML;
-  
-  
+  //let test = 
+ // the variable would be a combination of usingthe _dirname and path.join to create a file path that will 
+ //act as where you will be creating then sending this new info that is being generated.
+  //fs.writeFileSync('./dist/index.html, test');
+  //((answers) => writeFilesync('./dist/index.html, teamHTML.generateallhtml(answers)))
 };
+
+// fs.writeFileSync( file, data, options )
+// 4:30
+// another way to put it, is
+// (a destination, what will be written, and extra stuff like font)
 
 init();
 //write the string to a html file using fs.writeFileSync
