@@ -194,9 +194,14 @@ const generateTeam = () => {
   // Iterate through each team meber in TEAM:
   //   Get their role bycalling their getRole method.
   //   Depending on their role, call the appropriate generateHtml function, appendto HTML string . 
-
+  //Team.forEach(getRole)
   //teamHTML.gernerateMangerHTML;
-  //write the string to a html file using fs.writeFileSync
+  
+  
+};
+
+init();
+//write the string to a html file using fs.writeFileSync
   //egin ///create variables
   //inter
   //call function to gernate all based on above string
@@ -204,7 +209,8 @@ const generateTeam = () => {
   //writefile
   //teamhtml.generateallhtml(answers))) //answers are the variables above
   //fs.writeFileSync('./template.js')
-};
+
+
 
 // const init = () => {
 //   promptUser()
@@ -223,4 +229,4 @@ const generateTeam = () => {
 //     .catch((err) => console.error(err));
 // };
 
-init();
+
