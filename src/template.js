@@ -30,8 +30,7 @@ const generateMembers = teamArr => {
 	
 	// generate Manager
 	generateManagerHTML = (managerData) => {
-		return
-		`<div class="card" style="width: 18rem;">
+		return  `<div class="card" style="width: 18rem;">
         
         <div class="card-body manager">
             <h5 class="card-title managerName">Name:${managerData.managerName} </h5>
@@ -49,10 +48,11 @@ const generateMembers = teamArr => {
 		
 		
 	};
-	    // htmlData.push(data
+	//console.log(managerData.managerName);
+// 	    htmlData.push(managerData
        
-        // .map(manager => generateManagerHTML(manager))
-  // );
+//         .map(manager => generateManagerHTML(manager))
+//   );
 	//gen engin etc
 
 	for (var i = 0; i < engineer.length - 1; i++) {
@@ -62,8 +62,7 @@ const generateMembers = teamArr => {
 
 	}
 	generateEngineerHTML = (EngData) => {
-		return
-		`<div class="card" style="width: 18rem;">
+		return `<div class="card" style="width: 18rem;">
         
         <div class="card-body engineer">
           <h5 class="card-title engineerName">Name: ${EngData.engName}</h5>
@@ -87,8 +86,7 @@ const generateMembers = teamArr => {
 	};
 
 	generateInternHTML = (internData) => {
-		return
-		` <div class="card" style="width: 18rem;">
+		return ` <div class="card" style="width: 18rem;">
         
         <div class="card-body intern">
           <h5 class="card-title internName">Name: ${internData.internName}</h5>
