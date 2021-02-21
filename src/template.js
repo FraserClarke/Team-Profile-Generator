@@ -16,7 +16,12 @@ const generateMembers = teamArr => {
 //    );
 
 	let manager = teamArr.filter(team => team.getRole()=== "Manager");
-
+	
+// 	   htmlData.push(managerData
+       
+//        .map(manager => generateManagerHTML(manager))
+//   );
+	
 	let engineer = teamArr.filter(team => team.getRole()==="Engineer");
 
 	let intern = teamArr.filter(team => team.getRole()==="Intern");
@@ -24,7 +29,7 @@ const generateMembers = teamArr => {
 	console.log(manager);
 	
 	// generate Manager
-	 gernerateMangerHTML = (managerData) => {
+	generateManagerHTML = (managerData) => {
 		return
 		`<div class="card" style="width: 18rem;">
         
@@ -40,9 +45,14 @@ const generateMembers = teamArr => {
         
       </div> 
 	   `
-
+	   
+		
 		
 	};
+	    // htmlData.push(data
+       
+        // .map(manager => generateManagerHTML(manager))
+  // );
 	//gen engin etc
 
 	for (var i = 0; i < engineer.length - 1; i++) {
@@ -67,7 +77,7 @@ const generateMembers = teamArr => {
         
       </div>    
 	  `
-		
+	  
 	};
 
 	for (var i = 0; i < intern.length - 1; i++) {
@@ -101,7 +111,7 @@ const generateMembers = teamArr => {
 	//generate Intern
 
 	// concatenate the teams and return the full html conent as string
-	return htmlData.join(generateInternHTML, generateEngineerHTML, gernerateMangerHTML  );
+	return htmlData.join(generateInternHTML, generateEngineerHTML, generateManagerHTML  );
 
 }
 
