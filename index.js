@@ -199,7 +199,7 @@ const generateTeam = () => {
   console.log("yo----",Team);
   let team = teamBuilder(Team);
 
-// fs.writeFileSync("Output/team.html", team, "utf-8")
+ fs.writeFileSync("Output/team.html", team, "utf-8")
 };
 
 init();
