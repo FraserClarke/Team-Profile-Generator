@@ -7,7 +7,7 @@ const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
-const teamHTML = require("./src/template");
+const teamBuilder = require("./src/template.js");
 
 let Team = [];
 
@@ -51,14 +51,24 @@ function optionList() {
       },
     ])
     .then((teamChoices) => {
-      console.log(teamChoices);
-      if (teamChoices.Options === "Engineer") {
-        addEng();
-      } else if (teamChoices.Options === "Intern") {
-        addIntern();
-      } else {
-        generateTeam();
+      // console.log(teamChoices);
+      switch (teamChoices.Options) {
+        case "Engineer":
+          addEng();
+          break;
+        case "Intern":
+          addIntern();
+          break;
+        default:
+          generateTeam();
       }
+      // if (teamChoices.Options === "Engineer") {
+      //   addEng();
+      // } else if (teamChoices.Options === "Intern") {
+      //   addIntern();
+      // } else {
+      //   generateTeam();
+      // }
       //default(generateTeam)
 
       // switch (new Date().getDay()) {
@@ -73,7 +83,6 @@ function optionList() {
       // }
 
       //if default call the function that takes care of generating the template and writing the file
-      generateTeam();
       // if or switch condition  based teamChoices
     });
 }
@@ -107,7 +116,7 @@ function addEng() {
     //.then(optionList());
     .then((answers) => {
       const engineer = new Engineer(
-        answers.enginName,  ///CHANGE TO ENIGINEER DATA SAME AS MANGE BELOW EG TEAM.PUSH etc
+        answers.engName,  ///CHANGE TO ENIGINEER DATA SAME AS MANGE BELOW EG TEAM.PUSH etc
         answers.engId,
         answers.engEmail,
         answers.engGithub
@@ -121,7 +130,7 @@ function addEng() {
 }
 
 function addIntern() {
-  console.log("addIntern");
+  // console.log("addIntern");
   inquirer
     .prompt([
       {
@@ -147,7 +156,6 @@ function addIntern() {
       
 
     ])
-
     .then((answers) => {
       const intern = new Intern(
         answers.internName,  ///CHANGE TO ENIGINEER DATA SAME AS MANGE BELOW EG TEAM.PUSH etc
@@ -185,7 +193,17 @@ const init = () => {
   });
 };
 
+teamBuilder(Team);
+
 const generateTeam = () => {
+  console.log("yo----",Team);
+  let team = teamBuilder(Team);
+
+// fs.writeFileSync("Output/team.html", team, "utf-8")
+};
+
+init();
+
   //pass array to the template
 
   // TEAM is a global array, at this point we know what team members we have .
@@ -208,14 +226,14 @@ const generateTeam = () => {
   // OR
   // fs.writeFileSync(outputPath, variable, "utf-8");
   // var variable = renderHTML(array)
-};
+
 
 // fs.writeFileSync( file, data, options )
 // 4:30
 // another way to put it, is
 // (a destination, what will be written, and extra stuff like font)
 
-init();
+
 //write the string to a html file using fs.writeFileSync
   //egin ///create variables
   //inter

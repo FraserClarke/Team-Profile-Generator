@@ -16,6 +16,10 @@ test("can create a new employee name", () => {
 
 
 // if this.id is working
+test("can create a new employee name", () => {
+    const employee = new Employee("john", 100);
+    expect(employee.getId()).toBe(100);
+})
 
 // if this.email is working
 
