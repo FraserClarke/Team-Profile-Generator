@@ -16,29 +16,83 @@ const teamHTML = (teamArr) => {
 
 	let engineer = teamArr.filter(team => team.getRole()==="Engineer");
 
+	let intern = teamArr.filter(team => team.getRole()==="Intern");
+
 	console.log(manager);
 	
 	// generate Manager
 	 gernerateMangerHTML = (managerData) => {
 		return
-		`<div>${data.managerName}</div>`
-	}
+		`<div class="card" style="width: 18rem;">
+        
+        <div class="card-body manager">
+            <h5 class="card-title managerName">Name:${data.managerName} </h5>
+            <p class="card-text managerRole">Role: Manager</p>
+        </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item mangerId">ID: ${data.employeeId}</li>
+            <li class="list-group-item managerEmail">Email: ${data.emailAdress}</li>
+            <li class="list-group-item managerONumber">Office Number:${data.officeNumber} </li>
+            </ul>
+        
+      </div> 
+	   `
+
+		
+	};
 	//gen engin etc
 
 	for (var i = 0; i < engineer.length - 1; i++) {
 		let htmlEng = generateEngineerHTML(engineer[i]);
 		//push htmlEng into htmldata; .push method
+		htmlEng.push(htmlData);
 
-	}
+	};
 	generateEngineerHTML = (EngData) => {
 		return
-		`<div>${data.engineerName}</div>`
-	}
+		`<div class="card" style="width: 18rem;">
+        
+        <div class="card-body engineer">
+          <h5 class="card-title engineerName">Name: ${data.engName}</h5>
+          <p class="card-text engineerRole">Role: Engineer</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item engineerId">ID: ${data.engId} </li>
+          <li class="list-group-item engineerEmail">Email: ${data.engEmail} </li>
+          <li class="list-group-item engineerGithub">GitHub: ${data.engGithub}</li>
+        </ul>
+        
+      </div>    
+	  `
+		
+	};
+
+	for (var i = 0; i < intern.length - 1; i++) {
+		let htmlInt = generateEngineerHTML(engineer[i]);
+		//push htmlEng into htmldata; .push method
+		htmlInt.push(htmlData);
+	};
 
 	generateInternHTML = (internData) => {
 		return
+		` <div class="card" style="width: 18rem;">
+        
+        <div class="card-body intern">
+          <h5 class="card-title internName">Name: ${data.internName}</h5>
+          <p class="card-text internRole glyphicon glyphicon-education">Role: Intern</p>
+          <!-- <span class="glyphicon glyphicon-star" aria-hidden="true"></span> -->
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item internId">ID: ${data.internId}</li>
+          <li class="list-group-item internEmail">Email: ${data.internEmail}</li>
+          <li class="list-group-item internSchool">School: ${data.internSchool}</li>
+        </ul>
+        
+      </div>    
+`
+		
 		`<div>${data.internName}</div>`
-	}
+	};
 	
 
 	//generate Intern
