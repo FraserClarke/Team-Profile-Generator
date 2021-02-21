@@ -16,14 +16,24 @@ test("can create a new employee name", () => {
 
 
 // if this.id is working
-test("can create a new employee name", () => {
+test("can create a new employee id", () => {
     const employee = new Employee("john", 100);
     expect(employee.getId()).toBe(100);
 })
 
 // if this.email is working
+test("can create a new employee email", () => {
+    const employee = new Employee("john", 100);
+    expect(employee.getEmail()).toBe("john@gmail.com");
+})
+
 
 // if getRoleis working
+test("can get role", () => {
+    const employee = new Employee("Employee");
+    expect(employee.getRole()).toBe("Employee");
+})
+
 
 // if getName is working
 

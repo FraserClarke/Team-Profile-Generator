@@ -17,9 +17,9 @@ const generateMembers = teamArr => {
 
 	let manager = teamArr.filter(team => team.getRole()=== "Manager");
 	
-// 	   htmlData.push(managerData
+ 	   //htmlData.push(managerData.map(manager => generateManagerHTML(manager)));
        
-//        .map(manager => generateManagerHTML(manager))
+//        
 //   );
 	
 	let engineer = teamArr.filter(team => team.getRole()==="Engineer");
