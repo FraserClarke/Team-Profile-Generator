@@ -66,7 +66,7 @@ then creates an html page that displays the team members and the relevan data. T
 
 * [Github Repository](https://github.com/FraserClarke/Team-Profile-Generator)
 
-* [Walkthrough Video](https://drive.google.com/file/d/1Ap3qBjqHcQAsgBtMhherp9PJJZtl0aPk/view)
+* [Walkthrough Video](https://drive.google.com/file/d/1S-YjP7U9zjUjmaZ1yZt6yN-ZgYUrtYh0/view)
 
 * [Sample HTML File](./Output/team.html)
 
