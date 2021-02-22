@@ -15,20 +15,25 @@ const generateMembers = teamArr => {
 //        .map(manager => generateManagerHTML(manager))
 //    );
 
-	let manager = teamArr.filter(team => team.getRole()=== "Manager");
+	// let manager = teamArr.filter(team => team.getRole()=== "Manager");
 	
- 	   htmlData.push(teamArr
-		.map(manager => generateManagerHTML(manager)));
+ 	//    htmlData.push(teamArr
+	// 	.map(manager => generateManagerHTML(manager)));
+
+		let manager = teamArr.filter(team => team.getRole()=== "Manager");
+    
+        htmlData.push(manager
+        .map(element => generateManagerHTML(element)));
        
 //        
 //   );
 	
 	let engineer = teamArr.filter(team => team.getRole()==="Engineer");
-	htmlData.push(teamArr
+	htmlData.push(engineer
 		.map(engineer => generateEngineerHTML(engineer)));
 
 	let intern = teamArr.filter(team => team.getRole()==="Intern");
-	htmlData.push(teamArr
+	htmlData.push(intern
 		.map(intern => generateInternHTML(intern)));
 	console.log(manager);
 	
