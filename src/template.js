@@ -63,6 +63,9 @@ const generateMembers = teamArr => {
 		let htmlEng = generateEngineerHTML(engineer[i]);
 		//push htmlEng into htmldata; .push method
 		htmlData.push(htmlEng);
+	// 	let engineer = teamArr.filter(team => team.getRole()==="Engineer");
+	// htmlData.push(teamArr
+	// 	.map(engineer => generateEngineerHTML(engineer)));
 
 	}
 	generateEngineerHTML = (EngData) => {
