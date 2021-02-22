@@ -3,8 +3,9 @@ const Engineer = require('../lib/Engineer');
 // if it is an object
 
 test("can create a new Engineer object", () => {
-    const engineer = new Engineer("john", 123, "john@gmail.com");
-    expect(typeof(employee)).toBe("object")
+    const engineer = new Engineer("john", 123, "john@gmail.com", "Github");
+    expect(typeof(engineer)).toBe("object");
+    console.log(engineer);
 })
 
 
@@ -23,8 +24,9 @@ test("can create a new Engineer id", () => {
 
 // if this.email is working
 test("can create a new Engineer email", () => {
-    const engineer = new Engineer("john", 100);
+    const engineer = new Engineer("john", 100, "john@gmail.com", "github" );
     expect(engineer.getEmail()).toBe("john@gmail.com");
+
 })
 
 

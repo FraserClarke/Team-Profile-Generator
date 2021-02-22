@@ -23,7 +23,7 @@ test("can create a new Intern id", () => {
 
 // if this.email is working
 test("can create a new Intern email", () => {
-    const intern = new Intern("john", 100);
+    const intern = new Intern("john", 100, "john@gmail.com");
     expect(intern.getEmail()).toBe("john@gmail.com");
 })
 

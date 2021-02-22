@@ -23,7 +23,7 @@ test("can create a new employee id", () => {
 
 // if this.email is working
 test("can create a new employee email", () => {
-    const employee = new Employee("john", 100);
+    const employee = new Employee("john", 100, "john@gmail.com");
     expect(employee.getEmail()).toBe("john@gmail.com");
 })
 
@@ -45,8 +45,8 @@ test("can get role", () => {
 
 
 
-describe("Employee", () => {
-    it ("", () => {
+// describe("Employee", () => {
+//     it ("", () => {
         // create a new Employee object 
         // assert that the employees getName function returns the name I created the employee with. 
         //const employee = new Employee();
@@ -54,8 +54,8 @@ describe("Employee", () => {
         // Assert
         //expect(employee.getName).toEqual(employee.name);
 
-        const employee = new Employee("john");
-        expect(employee.getName).toEqual("john");
+        // const employee = new Employee("john");
+        // expect(employee.getName).toEqual("john");
         //expect(employee.name).toEqual(false)
         //const text = getName
 
@@ -67,9 +67,9 @@ describe("Employee", () => {
         // Running the expect code
         //expect(obj.text).toEqual(text);
     
-    })
+    // })
     // It returns the name of the employee
 
     //
 
-})
+//})

@@ -23,7 +23,7 @@ test("can create a new Manager id", () => {
 
 // if this.email is working
 test("can create a new Manager email", () => {
-    const manager = new Manager("john", 100);
+    const manager = new Manager("john", 100, "john@gmail.com");
     expect(manager.getEmail()).toBe("john@gmail.com");
 })
 
