@@ -17,28 +17,32 @@ const generateMembers = teamArr => {
 
 	let manager = teamArr.filter(team => team.getRole()=== "Manager");
 	
- 	   //htmlData.push(managerData.map(manager => generateManagerHTML(manager)));
+ 	   htmlData.push(teamArr
+		.map(manager => generateManagerHTML(manager)));
        
 //        
 //   );
 	
 	let engineer = teamArr.filter(team => team.getRole()==="Engineer");
+	htmlData.push(teamArr
+		.map(engineer => generateEngineerHTML(engineer)));
 
 	let intern = teamArr.filter(team => team.getRole()==="Intern");
-
+	htmlData.push(teamArr
+		.map(intern => generateInternHTML(intern)));
 	console.log(manager);
 	
 	// generate Manager
-	generateManagerHTML = (managerData) => {
+	generateManagerHTML = (managerData) => { 
 		return  `<div class="card" style="width: 18rem;">
         
         <div class="card-body manager">
-            <h5 class="card-title managerName">Name:${managerData.managerName} </h5>
+            <h5 class="card-title managerName">Name:${managerData.name} </h5>
             <p class="card-text managerRole">Role: Manager</p>
         </div>
             <ul class="list-group list-group-flush">
-            <li class="list-group-item mangerId">ID: ${managerData.employeeId}</li>
-            <li class="list-group-item managerEmail">Email: ${managerData.emailAdress}</li>
+            <li class="list-group-item mangerId">ID: ${managerData.id}</li>
+            <li class="list-group-item managerEmail">Email: ${managerData.email}</li>
             <li class="list-group-item managerONumber">Office Number:${managerData.officeNumber} </li>
             </ul>
         
@@ -58,45 +62,46 @@ const generateMembers = teamArr => {
 	for (var i = 0; i < engineer.length - 1; i++) {
 		let htmlEng = generateEngineerHTML(engineer[i]);
 		//push htmlEng into htmldata; .push method
-		htmlEng.push(htmlData);
+		htmlData.push(htmlEng);
 
 	}
 	generateEngineerHTML = (EngData) => {
 		return `<div class="card" style="width: 18rem;">
         
         <div class="card-body engineer">
-          <h5 class="card-title engineerName">Name: ${EngData.engName}</h5>
+          <h5 class="card-title engineerName">Name: ${EngData.name}</h5>
           <p class="card-text engineerRole">Role: Engineer</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item engineerId">ID: ${EngData.engId} </li>
-          <li class="list-group-item engineerEmail">Email: ${EngData.engEmail} </li>
-          <li class="list-group-item engineerGithub">GitHub: ${EngData.engGithub}</li>
+          <li class="list-group-item engineerId">ID: ${EngData.id} </li>
+          <li class="list-group-item engineerEmail">Email: ${EngData.email} </li>
+          <li class="list-group-item engineerGithub">GitHub: ${EngData.github}</li>
         </ul>
         
       </div>    
 	  `
 	  
 	};
+	//console.log(EngData);
 
 	for (var i = 0; i < intern.length - 1; i++) {
-		let htmlInt = generateEngineerHTML(engineer[i]);
+		let htmlInt = generateInternHTML(intern[i]);
 		//push htmlEng into htmldata; .push method
-		htmlInt.push(htmlData);
+		htmlData.push(htmlInt);
 	};
 
 	generateInternHTML = (internData) => {
 		return ` <div class="card" style="width: 18rem;">
         
         <div class="card-body intern">
-          <h5 class="card-title internName">Name: ${internData.internName}</h5>
+          <h5 class="card-title internName">Name: ${internData.name}</h5>
           <p class="card-text internRole glyphicon glyphicon-education">Role: Intern</p>
           <!-- <span class="glyphicon glyphicon-star" aria-hidden="true"></span> -->
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item internId">ID: ${internData.internId}</li>
-          <li class="list-group-item internEmail">Email: ${internData.internEmail}</li>
-          <li class="list-group-item internSchool">School: ${internData.internSchool}</li>
+          <li class="list-group-item internId">ID: ${internData.id}</li>
+          <li class="list-group-item internEmail">Email: ${internData.email}</li>
+          <li class="list-group-item internSchool">School: ${internData.school}</li>
         </ul>
         
       </div>    
@@ -109,7 +114,7 @@ const generateMembers = teamArr => {
 	//generate Intern
 
 	// concatenate the teams and return the full html conent as string
-	return htmlData.join(generateInternHTML, generateEngineerHTML, generateManagerHTML  );
+	return htmlData.join();
 
 }
 
