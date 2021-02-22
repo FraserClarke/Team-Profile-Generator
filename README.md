@@ -59,7 +59,8 @@ then creates an html page that displays the team members and the relevan data. T
 
 
 ## Screenshots
-![Example screenshot](https://raw.githubusercontent.com/FraserClarke/Readme-Generator/main/utils/Screenshot.png)
+![Example screenshot](https://raw.githubusercontent.com/FraserClarke/Team-Profile-Generator/main/assets/Screenshot%20(117).png)
+![Example screenshot](https://raw.githubusercontent.com/FraserClarke/Team-Profile-Generator/main/assets/Screenshot%20(118).png)
 
 ## Links
 
