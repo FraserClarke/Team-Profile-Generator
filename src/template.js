@@ -42,7 +42,7 @@ const generateMembers = teamArr => {
 		return  `<div class="card col-md-auto" style="width: 18rem;">
         
         <div class="card-body manager">
-            <h5 class="card-title managerName">Name:${managerData.name} </h5>
+            <h5 class="card-title managerName">Name: ${managerData.name}</h5>
             <p class="card-text managerRole">Role: Manager</p>
         </div>
             <ul class="list-group list-group-flush">
@@ -145,12 +145,10 @@ module.exports = teamHTML => {
 	    <title>Team Profile Generator</title>
 	</head>
 	<body>
-	<div class="card text-center">
-        <div class="card-header">
-          Featured
-        </div>
-     </div>
-
+	<header class="card header text-center">
+        <h1>Team Profile Generator</h1>
+      </header>
+	<br>
 	 <div class="container">
 	 <div class = "row">
 		${generateMembers(teamHTML)}
@@ -158,5 +156,5 @@ module.exports = teamHTML => {
 	</div>
 	</body>
 	</html>
-    `;
+    `
 };
